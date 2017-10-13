@@ -1,11 +1,10 @@
 class Tag
-  attr_accessor :title, :posts
+  attr_accessor :title
 
   @@all = []
 
   def initialize(title)
     @title = title
-    @posts = []
     @@all << self
   end
 
@@ -23,6 +22,17 @@ class Tag
     self.find_by_title(title) || Tag.new(title)
   end
 
-  # what are the posts for each tag
+  def post_tags
+    PostTag.all.select do |post_tag|
+      post_tag.tag == self
+    end
+  end
+
+  def posts
+    # what are the posts for each tag
+    post_tags.map do |post_tag|
+      post_tag.post
+    end
+  end
 
 end
