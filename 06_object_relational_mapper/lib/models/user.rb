@@ -78,7 +78,7 @@ class User
     # find all posts for one user
     # post has a user_id column
     sql = <<-SQL
-      SELECT * FROM posts INNER JOIN users ON posts.user_id = users.id WHERE user_id = ?
+      SELECT * FROM posts LEFT JOIN users ON posts.user_id = users.id WHERE user_id = ?
     SQL
 
     DB[:conn].execute(sql, self.id)
