@@ -3,7 +3,7 @@ class Post
 
   def self.create_table
     sql = <<-SQL
-      CREATE TABLE posts (body text,user_id integer);
+      CREATE TABLE IF NOT EXISTS posts (body text,user_id integer);
     SQL
 
     DB[:conn].execute(sql)

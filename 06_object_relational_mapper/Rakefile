@@ -3,3 +3,8 @@ require_relative 'config/environment.rb'
 task :console do
   Pry.start
 end
+
+# task :greet do
+#   puts "Hello"
+#   puts 1 + 2
+# end
