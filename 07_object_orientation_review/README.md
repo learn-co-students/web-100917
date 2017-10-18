@@ -8,9 +8,7 @@
 * Single source of truth
 
 ## Domain
-We'll be building a ride-sharing application. The domain is composed of passengers,
-cars, and rides. A ride is the join model between a passenger and a car. A car has
-many passengers through rides, a passenger has many cars through rides.
+We'll be building a ride-sharing application. The domain is composed of passengers, cars, and rides. A ride is the join model between a passenger and a car. A car has many passengers through rides, a passenger has many cars through rides.
 
 ## Methods
 
@@ -22,8 +20,7 @@ many passengers through rides, a passenger has many cars through rides.
   * Passenger.all
   * Passenger.count
   * Passenger#schedule_ride(start_time, duration_in_minutes)
-    * Should find a list of cars in the passenger's city that are not going to
-      be occupied at the start time that the passenger wants to schedule the ride.
+    * Should find a list of cars in the passenger's city that are not going to be occupied at the start time that the passenger wants to schedule the ride.
 * Ride (join model - NEED references)
   * Ride#start_time [attr]
   * Ride#end_time [attr]
