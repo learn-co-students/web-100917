@@ -1,4 +1,5 @@
 require_relative './config/environment'
+# Defining my database tasks
 require 'sinatra/activerecord/rake'
 
 task :console do
