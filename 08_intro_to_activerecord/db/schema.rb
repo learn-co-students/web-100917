@@ -10,12 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2) do
+ActiveRecord::Schema.define(version: 4) do
+
+  create_table "cars", force: :cascade do |t|
+    t.string "license_plate"
+    t.string "make"
+    t.string "model"
+    t.string "driver_name"
+    t.integer "year"
+  end
 
   create_table "customers", force: :cascade do |t|
     t.string "name"
     t.string "city"
     t.integer "ssn"
+  end
+
+  create_table "rides", force: :cascade do |t|
+    t.integer "car_id"
+    t.integer "customer_id"
   end
 
 end
