@@ -1,0 +1,25 @@
+source "https://rubygems.org"
+
+# gem "rails"
+gem 'activerecord'
+gem 'sinatra-activerecord'
+gem 'rake'
+gem 'sqlite3'
+gem 'pry'
+gem 'require_all'
+gem 'rest-client'
+gem 'rack' # allows us to set up a server on our computer
+gem 'shotgun' # when you make changes to the source file, it'll update the server
+gem 'sinatra'
+  # the backbone of mvc relationship
+  # a bunch of pre-written methods
+  # allows you to generate html with ruby
+
+  # a web framework (a library / collection of libraries) allows us to achieve a goal
+  # made to build websites easily and quickly
+  # based on the MVC pattern (model-view-controller)
+    # model-controller-view
+  # ton of useful methods that we don't have to write
+  # does a lot of work for us in interpreting requests
+  # allows us to link to / generate dynamic html pages for our responses
+  # request-response lifecycle -> mvc pattern -> gives us useful tools
