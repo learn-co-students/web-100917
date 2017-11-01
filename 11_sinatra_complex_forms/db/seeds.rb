@@ -17,7 +17,7 @@ books['items'].each do |item|
 
   split_name = author.split(" ")
   first_name = split_name.first
-  last_name = split_name.last
+  last_name = split_name.length > 1 ? split_name.last : ''
 
   book.author = Author.find_or_create_by(
     first_name: first_name,
