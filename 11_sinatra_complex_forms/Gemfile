@@ -5,7 +5,7 @@ gem 'activerecord'
 gem 'sinatra-activerecord'
 gem 'rake'
 gem 'sqlite3'
-gem 'pry'
+gem 'byebug'
 gem 'require_all'
 gem 'rest-client'
 gem 'rack' # allows us to set up a server on our computer

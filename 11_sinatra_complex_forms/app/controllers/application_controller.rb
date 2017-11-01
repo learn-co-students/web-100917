@@ -1,28 +1,56 @@
 class ApplicationController < Sinatra::Base
   set :views, Proc.new {File.join('app', "views")}
+  set :method_override, true
 
-  # '/', say hello
-  # what type of request should it be?
-  # what should the route be?
-  # what should the controller DO (controller action)
-  # get '/anything' do
-  #   # I want to show a random number (between 1 and 100) in the view
-  #   @user = User.find(1) #if we had User model
-  #   erb :index # look for views/index.erb
-  # end
-  #
-  # get '/welcome' do
-  #   @random_number = rand(0..100)
-  #   erb :welcome
-  # end
-
+  # Index   GET     '/authors'          Show all of one resource
   get '/authors' do
     # get all the authors
     @authors = Author.all
 
     # render the erb
-    erb :authors
+    erb :'authors/index'
   end
+
+  # New     GET     '/authors/new'      Show the form to create one resource
+  get '/authors/new' do
+    erb :'authors/new'
+  end
+
+  # Create  POST    '/authors'          Create the resource from the form
+  post '/authors' do
+    author = Author.create(params)
+    redirect "/authors/#{author.id}"
+  end
+
+  # Show    GET     '/authors/:id'      Show one of one resource
+  get '/authors/:id' do
+    # What's in my params?
+    @author = Author.find(params[:id])
+    erb :'authors/show'
+  end
+
+  # Edit    GET     '/authors/:id/edit' Show the form to edit one resource
+  get '/authors/:id/edit' do
+    @author = Author.find(params[:id])
+    erb :'authors/edit'
+  end
+
+  # Update  PATCH   '/authors/:id'      Updates the resource from the form
+  patch '/authors/:id' do
+    author = Author.find(params[:id])
+    author.update(params[:author])
+
+    redirect "/authors/#{author.id}"
+  end
+
+  # Delete  DELETE  '/authors/:id'      Deletes the resource (by ID)
+  delete '/authors/:id' do
+    author = Author.find(params[:id])
+    author.delete
+
+    redirect "/authors"
+  end
+
 
   get '/books' do
     @books = Book.all
