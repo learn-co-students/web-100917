@@ -1,0 +1,6 @@
+<h1><%= @author.full_name %></h1>
+
+<form action="/authors/<%= @author.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete author">
+</form>
