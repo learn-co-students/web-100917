@@ -1,0 +1,19 @@
+<!-- # When would I use form_for v form_tag?
+# form_for is when you are using a model (directly related to model)
+# form_tag just a way to create a form -->
+
+<%= form_for @tweet do |form| %>
+  <%= form.text_field :text %>
+  <%= form.submit "New tweet" %>
+<% end %>
+
+<!-- { ..., tweet: {body: 'hello', updated_at: '1234-34' }, ..} -->
+
+<%#= form_tag "/tweets" do %>
+  <%#= text_field_tag:body, nil, id: 1, placeholder: 'new tweet', disabled: true  %>
+  <%#= submit_tag "New tweet" %>
+<%# end %>
+
+<!-- <form action="/tweets">
+  <input type="text" name="body">
+</form> -->
