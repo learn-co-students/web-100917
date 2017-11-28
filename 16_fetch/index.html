@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Document Object Model</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Dessertify</h1>
+      <nav>
+        <ul>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="article.html">Latest Post</a></li>
+          <li><a href="chef.html">Featured Chef</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="welcome">
+        <h2>Welcome</h2>
+        <p>If this is your first time here, check out the featured article below!</p>
+        <div class="close outline">
+          &times;
+        </div>
+      </section>
+      <section>
+        <h3>New Post</h3>
+        <form class="outline new-post-form">
+          <div class="chef-input">
+            <label>Chef</label>
+            <input type="text">
+          </div>
+
+          <div class="title-input">
+            <label>Title</label>
+            <input type="text">
+          </div>
+
+          <div class="text-input">
+            <label>Text</label>
+            <textarea></textarea>
+          </div>
+
+          <div class="date-input">
+            <label>Date</label>
+            <input type="date" value="2017-11-25">
+          </div>
+
+          <input type="submit">
+        </form>
+      </section>
+      <section class="articles">
+        <header>
+          <h2>Articles</h2>
+          <form class="outline">
+            <label>Filter by chef:</label>
+            <select class="chef-list">
+              <option>Option</option>
+              <option>Option</option>
+              <option>Option</option>
+              <option>Option</option>
+            </select>
+            <label>Sort by:</label>
+            <a>Newest</a>
+            <a>Oldest</a>
+            <a>Title</a>
+            <a>Most comments</a>
+          </form>
+        </header>
+
+        <div id="article-list">
+
+          <!-- <article>
+            <header>
+              <h3>Title</h3>
+              <address>
+                <img src="" alt="Chef name profile photo">
+                <a href="link-to-chef-page.html">Chef</a>
+              </address>
+              <time>Time</time>
+            </header>
+            <section>
+              Text
+            </section>
+            <footer>
+              <h4>Latest comment:</h4>
+              <p>Latest Comment</p>
+              <a href="link-to-article-page.html">Total Comment Count</a>
+            </footer>
+          </article> -->
+
+        </div>
+      </section>
+    </main>
+    <footer>Thanks for visiting!</footer>
+  </body>
+</html>
