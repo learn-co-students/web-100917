@@ -72,22 +72,22 @@ p {
   margin-bottom: 0;
 }
 
-section > article {
+section article {
   margin-bottom: 2rem;
 }
 
-section > article > header {
+section article > header {
   margin-top: 0;
   background-color: hsla(120, 100%, 90%, 1);
   padding: 1rem 2rem;
   border: 5px solid hsla(120, 100%, 80%, 1);
 }
 
-section > article > header address {
+section article > header address {
   margin-top: 1rem;
 }
 
-section > article > header img {
+section article > header img {
   border-radius: 50%;
   width: 4rem;
   height: 4rem;
